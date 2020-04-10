@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "264516550860",
+    "firebase_url": "https://employee-activity-tracker.firebaseio.com",
+    "project_id": "employee-activity-tracker",
+    "storage_bucket": "employee-activity-tracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:264516550860:android:7eb2bd96b7a030ab6d4269",
+        "android_client_info": {
+          "package_name": "com.tharinda.employee_activity_tracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "264516550860-9ove5rv1vhqj191g7fv7ge04n8kdu2rf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMLATwGwluV_XYC3sRoXQAX2UfLcxcfcg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "264516550860-9ove5rv1vhqj191g7fv7ge04n8kdu2rf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
