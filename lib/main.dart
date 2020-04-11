@@ -1,5 +1,5 @@
 import 'package:employee_activity_tracker/models/user.dart';
-import 'package:employee_activity_tracker/screens/authenticate/authenticate.dart';
+// import 'package:employee_activity_tracker/screens/authenticate/authenticate.dart';
 import 'package:employee_activity_tracker/screens/wrapper.dart';
 import 'package:employee_activity_tracker/services/auth.dart';
 import 'package:flutter/material.dart';

@@ -1,16 +1,16 @@
 import 'package:employee_activity_tracker/services/auth.dart';
 import 'package:flutter/material.dart';
 
-class SignIn extends StatefulWidget {
+class Register extends StatefulWidget {
 
   final Function toggleAuth;
-  SignIn({this.toggleAuth});
+  Register({this.toggleAuth});
 
   @override
-  _SignInState createState() => _SignInState();
+  _RegisterState createState() => _RegisterState();
 }
 
-class _SignInState extends State<SignIn> {
+class _RegisterState extends State<Register> {
 
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
@@ -25,12 +25,12 @@ class _SignInState extends State<SignIn> {
       appBar: AppBar(
         backgroundColor: Colors.blue[600],
         elevation: 0.0,
-        title: Text('Sign In'),
+        title: Text('Sign Up'),
         actions: <Widget>[
           FlatButton.icon(
             icon: Icon(Icons.person),
-            label: Text("Register"),
-            onPressed: () {
+            label: Text('Login'),
+            onPressed: (){
               widget.toggleAuth();
             },
           )
@@ -59,8 +59,8 @@ class _SignInState extends State<SignIn> {
                 decoration: InputDecoration(
                   hintText: 'Password',
                 ),
-                validator: (val) => val.length < 6 ? 'Enter password' : null,
                 obscureText: true,
+                validator: (val) => val.length < 6 ? 'Enter a password(6 or more characters)' : null,
                 onChanged: (val) {
                   setState(() {
                     password = val;
@@ -71,21 +71,21 @@ class _SignInState extends State<SignIn> {
               RaisedButton(
                 color: Colors.blue,
                 child: Text(
-                  'Sign In',
+                  'Register',
                   style: TextStyle(
                     color: Colors.white
                   ),
                 ),
                 onPressed: () async {
                   if(_formKey.currentState.validate()){
-                    dynamic result = await _auth.signInWithEmailAndPassword(email, password);
+                    dynamic result = await _auth.registerWithEmailAndPassword(email, password);
                     if(result == null){
                       setState(() {
-                        error = "Invalid Credentials";
+                        error = "Provide valid credentials";
                       });
                     }
                   }
-                },
+                } 
               ),
               SizedBox(height: 12.0),
               Text(
