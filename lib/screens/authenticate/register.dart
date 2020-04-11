@@ -1,4 +1,5 @@
 import 'package:employee_activity_tracker/services/auth.dart';
+import 'package:employee_activity_tracker/shared/loading.dart';
 import 'package:flutter/material.dart';
 
 class Register extends StatefulWidget {
@@ -18,10 +19,11 @@ class _RegisterState extends State<Register> {
   String email = '';
   String password = '';
   String error = '';
+  bool loading = false;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return loading ? Loading() : Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue[600],
         elevation: 0.0,
@@ -78,9 +80,13 @@ class _RegisterState extends State<Register> {
                 ),
                 onPressed: () async {
                   if(_formKey.currentState.validate()){
+                    setState(() {
+                      loading = true;
+                    });
                     dynamic result = await _auth.registerWithEmailAndPassword(email, password);
                     if(result == null){
                       setState(() {
+                        loading = false;
                         error = "Provide valid credentials";
                       });
                     }
