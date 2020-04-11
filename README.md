@@ -1,4 +1,4 @@
-# employee_activity_tracker
+# Employee_Activity_Tracker
 
 A new Flutter project.
 
