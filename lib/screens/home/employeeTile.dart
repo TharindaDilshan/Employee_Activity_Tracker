@@ -17,6 +17,7 @@ class EmployeeTile extends StatelessWidget {
           leading: CircleAvatar(
             radius: 25.0,
             backgroundColor: Colors.yellow[emp.priority],
+            backgroundImage: AssetImage('assets/border.png'),
           ),
           title: Text(emp.name),
           subtitle: Text(emp.currentTask),
