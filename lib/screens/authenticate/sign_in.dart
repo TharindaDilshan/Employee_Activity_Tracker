@@ -27,7 +27,7 @@ class _SignInState extends State<SignIn> {
       appBar: AppBar(
         backgroundColor: Colors.blue[600],
         elevation: 0.0,
-        title: Text('Sign In'),
+        title: Text('Activity Tracker'),
         actions: <Widget>[
           FlatButton.icon(
             icon: Icon(Icons.person),
